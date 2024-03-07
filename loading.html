@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нафиг ты это читаешь?</title>
+    <link rel="stylesheet" href="loading.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container" class="container">
+        <textarea id="text" disabled></textarea>
+    </div>
+    <audio src="haha.mp3" id="sound">
+    <script>
+        setInterval(()=>{
+            document.getElementById("container").style.left = Math.round((window.innerWidth-1200)/2).toString()+"px"
+            document.getElementById("container").style.top = Math.round((window.innerHeight-800)/2).toString()+"px"
+        },100)
+        
+
+var onlyonce = false
+document.getElementById("text").value="Press any key to enable your PC..."
+document.addEventListener('keydown', (event) => {
+    if(onlyonce==false){
+        onlyonce=true
+        document.getElementById("sound").play()
+        setTimeout(()=>{document.getElementById("text").value="_"},500)
+        setTimeout(()=>{document.getElementById("text").value=""},1000)
+        setTimeout(()=>{document.getElementById("text").value="_"},1500)
+        setTimeout(()=>{document.getElementById("text").value=""},2000)
+        setTimeout(()=>{document.getElementById("text").value="_"},2500)
+        setTimeout(()=>{document.getElementById("text").value=""},3000)
+        setTimeout(()=>{document.getElementById("text").value=`████  ████
+ █   █
+ █   ████    The
+ █     █    Sashkin
+ █   ████`},3500)
+        setTimeout(()=>{document.getElementById("text").value=`████  ████
+ █   █
+ █   ████    The
+ █     █    Sashkin
+ █   ████
+
+THEBIOS(C)2024 TheSashkin Inc.
+
+MOTHERBOARD: HTML`},4000)
+        setTimeout(()=>{document.getElementById("text").value=`████  ████
+ █   █
+ █   ████    The
+ █     █    Sashkin
+ █   ████
+
+THEBIOS(C)2024 TheSashkin Inc.
+
+MOTHERBOARD: HTML
+CPU: JAVASCRIPT
+GPU: CSS`},4500)
+        setTimeout(()=>{document.getElementById("text").value=`████  ████
+ █   █
+ █   ████    The
+ █     █    Sashkin
+ █   ████
+
+THEBIOS(C)2024 TheSashkin Inc.
+
+MOTHERBOARD: HTML
+CPU: JAVASCRIPT
+GPU: CSS
+
+Detected drives: GitHub
+Total RAM: Your WebBrowser`},5000)
+        setTimeout(()=>{document.getElementById("text").value=``},10000)
+        setTimeout(()=>{document.getElementById("text").value=`No Boot Devices Found`},13000)
+        setTimeout(()=>{document.getElementById("text").value=`No Boot Devices Found
+Press any key to enter setup`
+document.addEventListener('keydown', (event) => {
+    location.href = "bios.html"
+}, false);},13500)
+    }
+}, false);
+    </script>
+</body>
+</html>

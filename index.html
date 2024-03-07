@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нафиг ты это читаешь?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="welcomemsgs" class="container">
+        <h1 id="welcome1">Управление сайтом происходит через стрелочки</h1>
+        <h1 style="opacity: 0%; transition: 1s;" id="welcome2">Сделано на чистом HTML для НЕДОХАКЕРЫ Lite</h1>
+        <h1 style="opacity: 0%; transition: 1s;" id="welcome3">ВНИМАНИЕ!!! Вредоносные файлы</h1>
+    </div>
+    <script>
+        setInterval(()=>{
+            document.getElementById("welcomemsgs").style.left = Math.round((window.innerWidth-1200)/2).toString()+"px"
+            document.getElementById("welcomemsgs").style.top = Math.round((window.innerHeight-800)/2).toString()+"px"
+        },100)
+        setTimeout(()=>{
+            document.getElementById('welcome1').style = "opacity: 0%;"
+            setTimeout(()=>{
+                document.getElementById('welcome2').style = "opacity: 100%; transition: 1s;"
+                setTimeout(()=>{
+                    document.getElementById('welcome2').style = "opacity: 0%; transition: 1s;"
+                    setTimeout(()=>{
+                        document.getElementById('welcome3').style = "opacity: 100%; transition: 1s;"
+                        setTimeout(()=>{
+                            location.href = "loading.html"
+                        },10000)
+                    },1000)
+                },5000)
+            }, 1000)
+        },5000)
+    </script>
+</body>
+</html>

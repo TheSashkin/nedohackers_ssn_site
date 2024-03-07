@@ -1,0 +1,27 @@
+.container{
+    position: absolute;
+    width: 1200px;
+    height: 800px;
+    background-color: rgb(36,36,36);
+    border-radius: 20px;
+    color: white;
+    font-family: 'Rubik';
+}
+body{
+    background-color: rgb(18,18,18);
+    overflow: hidden;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    transition: 1s;
+}
+
+h1{
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    font-size: 48px;
+}

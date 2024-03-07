@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нафиг ты это читаешь?</title>
+    <link rel="stylesheet" href="bios.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container" class="container">
+        <a id="abouttab" style="background-color: rgb(193, 193, 193); color: rgb(0, 26, 255); position: absolute; top: 1%; left: 1%; font-size: 24px; padding: 10px;">About</a>
+        <a id="thesashkintab" style="background-color: rgb(0, 26, 255); color: rgb(193, 193, 193); position: absolute; top: 1%; left: 14%; font-size: 24px; padding: 10px;">TheSashkin</a>
+        <a id="alexmotutab" style="background-color: rgb(0, 26, 255); color: rgb(193, 193, 193); position: absolute; top: 1%; left: 35.5%; font-size: 24px; padding: 10px;">AlexMotu</a>
+        <a id="friziktab" style="background-color: rgb(0, 26, 255); color: rgb(193, 193, 193); position: absolute; top: 1%; right: 25%; font-size: 24px; padding: 10px;">Frizik1337</a>
+        <a id="cooptab" style="background-color: rgb(0, 26, 255); color: rgb(193, 193, 193); position: absolute; top: 1%; right: 1%; font-size: 24px; padding: 10px;">Cooperative</a>
+        <div id="containerabout" class="container2">
+            <textarea id="textabout" disabled></textarea>
+        </div>
+        <div id="thesashkincontainer" hidden class="container2">
+            <p id="thesashkin1" style="margin-left: 30px; color: rgb(193, 193, 193); background-color: rgb(0, 26, 255); padding: 5px; width: fit-content;">Windows 12 [Download, Password: 8088]</p>
+            <p id="thesashkin2" style="margin-left: 30px; color: rgb(193, 193, 193); background-color: rgb(0, 26, 255); padding: 5px; width: fit-content;">FortniggaX [Download]</p>
+        </div>
+        <div id="alexmotucontainer" hidden class="container2">
+            <p id="alexmotu1" style="margin-left: 30px; color: rgb(193, 193, 193); background-color: rgb(0, 26, 255); padding: 5px; width: fit-content;">Antivirus [Video]</p>
+            <p id="alexmotu2" style="margin-left: 30px; color: rgb(0, 26, 255); padding: 5px; width: fit-content;">Fortnite [Video]</p>
+        </div>
+        <div id="frizikcontainer" hidden class="container2">
+            <p id="frizik1" style="margin-left: 30px; color: rgb(193, 193, 193); background-color: rgb(0, 26, 255); padding: 5px; width: fit-content;">An error occurred while loading the page</p>
+        </div>
+        <div id="coopcontainer" hidden class="container2">
+            <p id="coop1" style="margin-left: 30px; color: rgb(193, 193, 193); background-color: rgb(0, 26, 255); padding: 5px; width: fit-content;">Windows 13</p>
+        </div>
+    </div>
+    <script>
+        var cooptabobjects = 1
+        var alextabonjects = 2
+        var sashkinobjects = 2
+        var frizikobjects = 1
+        var selectedtab = 1
+        var currentobject = 1
+
+        document.addEventListener('keydown', (event) => {
+        var name = event.key;
+        if (name === "ArrowRight") {
+            if(selectedtab !== 5){
+                selectedtab++
+                currentobject=1
+            }
+        }
+        else if (name === "ArrowLeft") {
+            if(selectedtab !== 1){
+                selectedtab--
+                currentobject=1
+            }
+        }
+        else if (name === "ArrowDown") {
+            if(selectedtab !== 1){
+                if(selectedtab===2){
+                    if(currentobject!==sashkinobjects){
+                        currentobject++
+                    }
+                } else if(selectedtab===3){
+                    if(currentobject!==alextabonjects){
+                        currentobject++
+                    }
+                } else if(selectedtab===4){
+                    if(currentobject!==frizikobjects){
+                        currentobject++
+                    }
+                } else if(selectedtab===5){
+                    if(currentobject!==cooptabobjects){
+                        currentobject++
+                    }
+                }
+            }
+        }
+        else if (name === "ArrowUp") {
+            if(currentobject!==1){
+                currentobject--
+            }
+        } else if (name === "Enter"){
+            if(selectedtab==2){
+                if(currentobject==1){
+                    location.href = "https://bit.ly/W12ForNedLite"
+                } else if(currentobject==2){
+                    location.href = "https://onedrive.live.com/?authkey=!AGti4776PA-Cviw&id=8E4DBD91C549DADC!106&cid=8E4DBD91C549DADC&parId=root&parQt=sharedby&parCid=UnAuth&o=OneUp"
+                }
+            } else if(selectedtab==3){
+                if (currentobject==1){
+                    location.href = "https://www.youtube.com/watch?v=pZgQ1PzKuXA"
+                }
+                else if(currentobject==2){
+                    location.href = "https://www.youtube.com/watch?v=d58IrCzLGyw"
+                }
+            } else if(selectedtab==5){
+                if (currentobject==1){
+                    location.href = "notreleased.html"
+                }
+            }
+        }
+    }, false);
+        setInterval(()=>{
+            document.getElementById("container").style.left = Math.round((window.innerWidth-1200)/2).toString()+"px"
+            document.getElementById("container").style.top = Math.round((window.innerHeight-800)/2).toString()+"px"
+
+            if(selectedtab!==1){
+                if(selectedtab===2){
+                    for (let i = 1; i < sashkinobjects+1; i++) {
+                        document.getElementById(`thesashkin${i}`).style.backgroundColor = "rgb(193, 193, 193)"
+                        document.getElementById(`thesashkin${i}`).style.color = "rgb(0, 26, 255)"
+                    }
+                    document.getElementById(`thesashkin${currentobject}`).style.backgroundColor = "rgb(0, 26, 255)"
+                    document.getElementById(`thesashkin${currentobject}`).style.color = "rgb(193, 193, 193)"
+                    document.getElementById("abouttab").style.backgroundColor = "rgb(0, 26, 255)"
+                    document.getElementById("abouttab").style.color = "rgb(193, 193, 193)"
+                    document.getElementById("alexmotutab").style.backgroundColor = "rgb(0, 26, 255)"
+                    document.getElementById("alexmotutab").style.color = "rgb(193, 193, 193)"
+                    document.getElementById("friziktab").style.backgroundColor = "rgb(0, 26, 255)"
+                    document.getElementById("friziktab").style.color = "rgb(193, 193, 193)"
+                    document.getElementById("cooptab").style.backgroundColor = "rgb(0, 26, 255)"
+                    document.getElementById("cooptab").style.color = "rgb(193, 193, 193)"
+                    document.getElementById("thesashkintab").style.backgroundColor = "rgb(193, 193, 193)"
+                    document.getElementById("thesashkintab").style.color = "rgb(0, 26, 255)"
+                    document.getElementById("containerabout").hidden = true
+                    document.getElementById("thesashkincontainer").hidden = false
+                    document.getElementById("alexmotucontainer").hidden = true
+                    document.getElementById("frizikcontainer").hidden = true
+                    document.getElementById("coopcontainer").hidden = true
+                } else if(selectedtab===3){
+                    for (let i = 1; i < alextabonjects+1; i++) {
+                        document.getElementById(`alexmotu${i}`).style.backgroundColor = "rgb(193, 193, 193)"
+                        document.getElementById(`alexmotu${i}`).style.color = "rgb(0, 26, 255)"
+                    }
+                    document.getElementById(`alexmotu${currentobject}`).style.backgroundColor = "rgb(0, 26, 255)"
+                    document.getElementById(`alexmotu${currentobject}`).style.color = "rgb(193, 193, 193)"
+                    document.getElementById("abouttab").style.backgroundColor = "rgb(0, 26, 255)"
+                    document.getElementById("abouttab").style.color = "rgb(193, 193, 193)"
+                    document.getElementById("alexmotutab").style.backgroundColor = "rgb(193, 193, 193)"
+                    document.getElementById("alexmotutab").style.color = "rgb(0, 26, 255)"
+                    document.getElementById("friziktab").style.backgroundColor = "rgb(0, 26, 255)"
+                    document.getElementById("friziktab").style.color = "rgb(193, 193, 193)"
+                    document.getElementById("cooptab").style.backgroundColor = "rgb(0, 26, 255)"
+                    document.getElementById("cooptab").style.color = "rgb(193, 193, 193)"
+                    document.getElementById("thesashkintab").style.backgroundColor = "rgb(0, 26, 255)"
+                    document.getElementById("thesashkintab").style.color = "rgb(193, 193, 193)"
+                    document.getElementById("containerabout").hidden = true
+                    document.getElementById("thesashkincontainer").hidden = true
+                    document.getElementById("alexmotucontainer").hidden = false
+                    document.getElementById("frizikcontainer").hidden = true
+                    document.getElementById("coopcontainer").hidden = true
+                }
+                else if(selectedtab===4){
+                    for (let i = 1; i < frizikobjects+1; i++) {
+                        document.getElementById(`frizik${i}`).style.backgroundColor = "rgb(193, 193, 193)"
+                        document.getElementById(`frizik${i}`).style.color = "rgb(0, 26, 255)"
+                    }
+                    document.getElementById(`frizik${currentobject}`).style.backgroundColor = "rgb(0, 26, 255)"
+                    document.getElementById(`frizik${currentobject}`).style.color = "rgb(193, 193, 193)"
+                    document.getElementById("abouttab").style.backgroundColor = "rgb(0, 26, 255)"
+                    document.getElementById("abouttab").style.color = "rgb(193, 193, 193)"
+                    document.getElementById("alexmotutab").style.backgroundColor = "rgb(0, 26, 255)"
+                    document.getElementById("alexmotutab").style.color = "rgb(193, 193, 193)"
+                    document.getElementById("friziktab").style.backgroundColor = "rgb(193, 193, 193)"
+                    document.getElementById("friziktab").style.color = "rgb(0, 26, 255)"
+                    document.getElementById("cooptab").style.backgroundColor = "rgb(0, 26, 255)"
+                    document.getElementById("cooptab").style.color = "rgb(193, 193, 193)"
+                    document.getElementById("thesashkintab").style.backgroundColor = "rgb(0, 26, 255)"
+                    document.getElementById("thesashkintab").style.color = "rgb(193, 193, 193)"
+                    document.getElementById("containerabout").hidden = true
+                    document.getElementById("thesashkincontainer").hidden = true
+                    document.getElementById("alexmotucontainer").hidden = true
+                    document.getElementById("frizikcontainer").hidden = false
+                    document.getElementById("coopcontainer").hidden = true
+                }
+                else if(selectedtab===5){
+                    for (let i = 1; i < cooptabobjects+1; i++) {
+                        document.getElementById(`coop${i}`).style.backgroundColor = "rgb(193, 193, 193)"
+                        document.getElementById(`coop${i}`).style.color = "rgb(0, 26, 255)"
+                    }
+                    document.getElementById(`coop${currentobject}`).style.backgroundColor = "rgb(0, 26, 255)"
+                    document.getElementById(`coop${currentobject}`).style.color = "rgb(193, 193, 193)"
+                    document.getElementById("abouttab").style.backgroundColor = "rgb(0, 26, 255)"
+                    document.getElementById("abouttab").style.color = "rgb(193, 193, 193)"
+                    document.getElementById("alexmotutab").style.backgroundColor = "rgb(0, 26, 255)"
+                    document.getElementById("alexmotutab").style.color = "rgb(193, 193, 193)"
+                    document.getElementById("friziktab").style.backgroundColor = "rgb(0, 26, 255)"
+                    document.getElementById("friziktab").style.color = "rgb(193, 193, 193)"
+                    document.getElementById("cooptab").style.backgroundColor = "rgb(193, 193, 193)"
+                    document.getElementById("cooptab").style.color = "rgb(0, 26, 255)"
+                    document.getElementById("thesashkintab").style.backgroundColor = "rgb(0, 26, 255)"
+                    document.getElementById("thesashkintab").style.color = "rgb(193, 193, 193)"
+                    document.getElementById("containerabout").hidden = true
+                    document.getElementById("thesashkincontainer").hidden = true
+                    document.getElementById("alexmotucontainer").hidden = true
+                    document.getElementById("frizikcontainer").hidden = true
+                    document.getElementById("coopcontainer").hidden = false
+                }  
+            } else{
+                document.getElementById("abouttab").style.backgroundColor = "rgb(193, 193, 193)"
+                document.getElementById("abouttab").style.color = "rgb(0, 26, 255)"
+                document.getElementById("alexmotutab").style.backgroundColor = "rgb(0, 26, 255)"
+                document.getElementById("alexmotutab").style.color = "rgb(193, 193, 193)"
+                document.getElementById("friziktab").style.backgroundColor = "rgb(0, 26, 255)"
+                document.getElementById("friziktab").style.color = "rgb(193, 193, 193)"
+                document.getElementById("cooptab").style.backgroundColor = "rgb(0, 26, 255)"
+                document.getElementById("cooptab").style.color = "rgb(193, 193, 193)"
+                document.getElementById("thesashkintab").style.backgroundColor = "rgb(0, 26, 255)"
+                document.getElementById("thesashkintab").style.color = "rgb(193, 193, 193)"
+                document.getElementById("containerabout").hidden = false
+                document.getElementById("thesashkincontainer").hidden = true
+                document.getElementById("alexmotucontainer").hidden = true
+                document.getElementById("frizikcontainer").hidden = true
+                document.getElementById("coopcontainer").hidden = true
+            }
+        },50)
+        document.getElementById("textabout").value = `
+  Site developer: TheSashkin
+  Apps developers: TheSashkin, Alexmotu, Frizik1337
+  
+  
+
+  Donate to TheSashkin: 4100 1184 6605 4728 [YooMoney]
+  Donate to AlexMotu: Via Frizik1337 [Qiwi Unlicensed]
+  Donate to Frizik1337: https://hipolink.me/frzsupport
+  
+  
+  
+  The site was created only with HTML, CSS, JavaScript
+  
+
+
+
+  !!!WARNING!!!
+  This site contains malicious downloads!
+  
+  !!!Внимание!!!
+  Этот сайт содержит вредоносные загрузки!
+  
+  
+  Latest project: Windows 13 [Cooperative]
+  
+  
+  
+  
+  Made for nedohackers by TheSashkin`
+    </script>
+</body>
+</html>
