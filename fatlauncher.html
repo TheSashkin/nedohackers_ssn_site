@@ -533,7 +533,7 @@ video::-webkit-media-controls {
 				
 			}, false);
 			
-			history.pushState({"page": "/frontpage" }, 'Intave', "frontpage");
+			history.pushState({"page": "/fatlauncher.html" }, 'Intave', "fatlauncher.html");
 			
 			function downloadPage(id, callback, historyEntry) {
 				NProgress.configure({ showSpinner: false });
@@ -545,7 +545,7 @@ video::-webkit-media-controls {
 					const xhttp = new XMLHttpRequest();
 					xhttp.onload = function (){
 						var namee = "";
-						if (id === "/frontpage") {
+						if (id === "/fatlauncher.html") {
 							namee = "/";
 						} else {
 							namee = id;
